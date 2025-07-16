@@ -20,7 +20,7 @@ For a larger, production-grade application that is expected to scale, I would ad
 An example of a layered structure would be:
 
 ```
-go-task-api/
+GGtaskAPI/
 ├── api/          // HTTP handlers
 ├── model/        // Data structures (e.g., Task struct)
 ├── store/        // Data storage logic
