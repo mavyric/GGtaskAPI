@@ -19,11 +19,13 @@ For this project, I've used a **flat structure**, keeping all the core logic in 
 For a larger, production-grade application that is expected to scale, I would adopt a **layered structure**. This pattern separates concerns into distinct packages, improving maintainability and testability.
 An example of a layered structure would be:
 
+```
 go-task-api/
 ├── api/          // HTTP handlers
 ├── model/        // Data structures (e.g., Task struct)
 ├── store/        // Data storage logic
 └── main.go       // Wires everything together
+```
 
 This separation makes the project easier to manage as it grows. By choosing the flat structure here, I've selected the most direct and appropriate design for the current scope of the project.
 
