@@ -19,7 +19,7 @@
 
 1.  **Clone the repository (or create the files):**
     ```bash
-    # git clone [https://github.com/mavyric/GGtaskAPI.git](https://github.com/mavyric/GGtaskAPI.git)
+    # git clone https://github.com/mavyric/GGtaskAPI.git
     # cd GGtaskAPI
     ```
 
