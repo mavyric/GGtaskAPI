@@ -134,7 +134,7 @@ All request and response bodies are in JSON format.
 
 ## 🚀 Real-World Use Cases
 
-At its core, `GGtaskAPI` is a simple and efficient **two-state list manager**. Its minimalistic design makes it a perfect backend for any application that needs to track items through a "pending" and "done" lifecycle.
+At its core, `GGtaskAPI` is a simple and efficient **two-state list manager**. Its minimalistic design makes it a perfect backend for any application that needs to track items through a "pending" and "done" lifecycle. By adding fields, the API can also support more complex and interactive real-world applications.
 
 ***
 
@@ -156,9 +156,18 @@ Use this API to manage a queue of user-submitted content, such as blog posts or 
 
 ***
 
-### 3. Personal Reading or Movie Watchlist 🎬
-The API can power a personal app to keep track of media you want to consume.
+### 3. Simple Kanban Board Backend 📌
 
-* **Name**: The title of the book, article, or movie.
-* **Description**: A short note, URL, or the author/director's name.
-* **Status**: `0` for **To Read/Watch**, `1` for **Finished**.
+By expanding the `Status` field, the API can power a personal or small team project management board similar to Trello.
+
+* **Minor Change**: Modify the `Task` struct's `Status` field to be an integer representing multiple stages (e.g., `0` for "To Do", `1` for "In Progress", `2` for "Done").
+* **Use Case**: A front-end application could fetch all tasks and render them in columns based on their status, allowing users to visually track project progress.
+
+***
+
+### 4. Appointment or Reminder Service 🗓️
+
+By incorporating a timestamp, the API can be used as a backend for a simple reminder or scheduling application.
+
+* **Minor Change**: Add a `DueDate` `time.Time` field to the `Task` struct.
+* **Use Case**: The API stores appointments or future reminders. A separate background service could query the API for tasks with an upcoming `DueDate` and trigger notifications. The `Status` field would track if the reminder has been sent.
