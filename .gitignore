@@ -1,3 +1,6 @@
+# The compiled application binary
+ggtask-api
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -8,15 +11,9 @@
 # Test binary, built with `go test -c`
 *.test
 
-# Code coverage profiles and other test artifacts
+# Output of the go coverage tool
 *.out
-coverage.*
-*.coverprofile
-profile.cov
 
-# Go workspace file
-bin/
-pkg/
-
-# The compiled application binary
-ggtask-api
+# Go workspace directory
+/bin
+/pkg
