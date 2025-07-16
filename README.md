@@ -133,31 +133,32 @@ All request and response bodies are in JSON format.
 -   **Example:** `curl -X DELETE http://localhost:8080/tasks/YOUR_TASK_ID`
 
 ## 🚀 Real-World Use Cases
-At its core, GGtaskAPI is a simple and efficient two-state list manager. Its minimalistic design makes it a perfect backend for any application that needs to track items through a "pending" and "done" lifecycle.
+
+At its core, `GGtaskAPI` is a simple and efficient **two-state list manager**. Its minimalistic design makes it a perfect backend for any application that needs to track items through a "pending" and "done" lifecycle.
+
+***
 
 ### 1. Simple Bug Tracker 🐞
 For small projects, this API can serve as a lightweight issue tracker without the complexity of larger systems.
 
-Name: The bug title (e.g., "User login fails on Safari").
+* **Name**: The bug title (e.g., "User login fails on Safari").
+* **Description**: Detailed steps to reproduce the bug and any error messages.
+* **Status**: `0` for **Open**, `1` for **Closed/Resolved**.
 
-Description: Detailed steps to reproduce the bug and any error messages.
-
-Status: 0 for Open, 1 for Closed/Resolved.
+***
 
 ### 2. Basic Content Approval Queue 📝
 Use this API to manage a queue of user-submitted content, such as blog posts or comments, that require moderation.
 
-Name: The title of the submitted content.
+* **Name**: The title of the submitted content.
+* **Description**: The full body of the content needing review.
+* **Status**: `0` for **Pending Review**, `1` for **Approved**.
 
-Description: The full body of the content needing review.
-
-Status: 0 for Pending Review, 1 for Approved.
+***
 
 ### 3. Personal Reading or Movie Watchlist 🎬
 The API can power a personal app to keep track of media you want to consume.
 
-Name: The title of the book, article, or movie.
-
-Description: A short note, URL, or the author/director's name.
-
-Status: 0 for To Read/Watch, 1 for Finished.
+* **Name**: The title of the book, article, or movie.
+* **Description**: A short note, URL, or the author/director's name.
+* **Status**: `0` for **To Read/Watch**, `1` for **Finished**.
