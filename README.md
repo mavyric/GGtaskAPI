@@ -10,6 +10,23 @@
 - **Containerized**: Includes a multi-stage `Dockerfile` for lightweight and secure deployments.
 - **Tested**: Unit tests for all API endpoints.
 
+## Project Structure
+
+For this project, I've used a **flat structure**, keeping all the core logic in the `main` package. This approach is efficient and easy to navigate for smaller applications and microservices like this one.
+
+### Alternative: Layered Structure
+
+For a larger, production-grade application that is expected to scale, I would adopt a **layered structure**. This pattern separates concerns into distinct packages, improving maintainability and testability.
+An example of a layered structure would be:
+
+go-task-api/
+├── api/          // HTTP handlers
+├── model/        // Data structures (e.g., Task struct)
+├── store/        // Data storage logic
+└── main.go       // Wires everything together
+
+This separation makes the project easier to manage as it grows. By choosing the flat structure here, I've selected the most direct and appropriate design for the current scope of the project.
+
 ## 🛠️ Prerequisites
 
 - [Go](https://go.dev/doc/install) 1.18+
